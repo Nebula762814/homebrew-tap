@@ -7,10 +7,9 @@ class NotesTui < Formula
 
   depends_on "python@3.11"
 
-  def install
-    bin.install "notes"
-  end
-
+def install
+  bin.install "notes.py" => "notes"
+end
   test do
     system "#{bin}/notes", "--help"
   end
